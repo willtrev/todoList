@@ -50,9 +50,6 @@ function App() {
 
   return (
     <div>
-      <head>
-        <title>ToDo</title>
-      </head>
       <Header />
       <div className={styles.mainContainer}>
         <form 
