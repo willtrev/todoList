@@ -1,0 +1,104 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.5em;
+}
+
+.list div {
+  width: 46rem;
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  background-color: var(--gray-500);
+
+  align-items: flex-start;
+}
+
+.emptyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  line-height: 140%;
+  margin-top: 1.5em;
+  width: 46rem;
+  
+  border-top: 1px solid var(--gray-300);
+  border-radius: 8px;
+  padding: 64px;
+  color: var(--gray-300);
+  font-size: 1rem;
+}
+
+.list input {
+  opacity: 0;
+}
+
+.list label {
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.list input:checked + label {
+  border-radius: 8px;
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.checkboxInput {
+  position: absolute;
+  visibility: hidden;
+}
+
+.checkbox {
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+}
+
+.checkbox span:first-child {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.listItem input:not(:checked) + label span:first-child {
+  background-image: url('../assets/notChecked.svg');
+}
+
+.listItem input:not(:checked) + label span:first-child:hover {
+  background-image: url('../assets/notCheckedHover.svg');
+}
+
+.listItem input:checked + label span:first-child {
+  background-image: url('../assets/checked.svg');
+}
+.listItem input:checked + label span:first-child:hover {
+  background-image: url('../assets/checkedHover.svg');
+}
+
+.checkbox span:last-child {
+  padding-left: 12px;
+  width: 39.5rem;
+}
+
+.deleteIcon {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  height: 1.5rem;
+  width: 1.5rem;
+  background-image: url('../assets/trash.svg');
+}
+
+.deleteIcon:hover {
+  background-image: url('../assets/trashHover.svg');
+}

@@ -1,0 +1,142 @@
+.mainContainer {
+  margin: 0 ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 0 16px;
+  
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  max-width: 46rem;
+  width: 100%;
+  transform:translateY(-50%);
+}
+
+.formContainer input {
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+
+  color: var(--gray-100);
+  background-color: var(--gray-500);
+  border: 1px solid var(--gray-700);
+}
+
+.formContainer button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+
+  font-weight: 700;
+  font-size: 0.875rem;
+
+  color: var(--gray-100);
+  background-color: var(--blue-dark);
+  transition: background-color 0.2s;
+}
+
+.formContainer button:hover {
+  background-color: var(--blue);
+}
+
+.listHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 46rem;
+  width: 100%;
+}
+
+.listHeader div {
+  display: flex;
+  gap: 8px;
+}
+
+.createdTasks p {
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.completedTasks p {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 0.875rem;
+}
+
+.tasksCount {
+  background-color: var(--gray-400);
+  padding: 2px 8px;
+  border-radius: 16px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: var(--gray-200);
+}
+
+.listBox {
+  margin-top: 3rem;
+}
+
+
+.emptyList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  line-height: 140%;
+  margin-top: 1.5em;
+  width: 46rem;
+  
+  border-top: 1px solid var(--gray-300);
+  border-radius: 8px;
+  padding: 64px;
+  color: var(--gray-300);
+  font-size: 1rem;
+}
+
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 1.5em;
+}
+
+.list div {
+  width: 46rem;
+  display: flex;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--gray-400);
+  background-color: var(--gray-500);
+
+  align-items: flex-start;
+}
+
+.list input {
+  opacity: 0;
+}
+
+.list label {
+  color: var(--gray-100);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.list input:checked + label {
+  border-radius: 8px;
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
